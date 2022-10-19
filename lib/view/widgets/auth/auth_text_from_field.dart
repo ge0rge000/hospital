@@ -10,7 +10,8 @@ class AuthTextFromFiled extends StatelessWidget {
   final Widget prefixIcon;
   final Widget ? suffixIcon;
   final String hintText;
-  const AuthTextFromFiled({required this.controller,
+  const AuthTextFromFiled(
+      {required this.controller,
     required this.obscureText ,
     required this.type_keyboard ,Key? key,
     required this.validator,
