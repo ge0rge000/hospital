@@ -51,7 +51,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Center(
                 child: TextUtils(
                   text: "Hospital",
-                  color: Colors.blue,
+                  color: Colors.red,
                   fontWeight: FontWeight.bold,
                   fontSize: 35,
                 ),
