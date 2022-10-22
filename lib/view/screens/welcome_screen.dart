@@ -69,7 +69,7 @@ class WelcomeScreen extends StatelessWidget {
                       vertical: 12
                     )),
                 onPressed: (){
-                  Get.offNamed(Routes.loginscreen);
+                  Get.offNamed(Routes.detailsensor);
             }, child: TextUtils(
               text: "Get Start",
               color: Colors.white,
