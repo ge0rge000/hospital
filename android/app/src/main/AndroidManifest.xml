@@ -1,7 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.helath">
-    <uses-permission android:name="android.permission.INTERNET" />
-    <application
+     <application
         android:label="helath"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
@@ -34,5 +33,6 @@
             android:value="2" />
 
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
