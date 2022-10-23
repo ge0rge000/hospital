@@ -21,7 +21,7 @@ class Sensor_detail extends StatelessWidget {
             SizedBox(height: 35,),
             SizedBox(height: 35,),
             Image.network('https://picsum.photos/250?image=9'),
-  
+
           ],
         ),
       ),
