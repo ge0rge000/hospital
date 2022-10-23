@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:helath/logic/bindings/main_binding.dart';
 
 import '../logic/bindings/auth_binding.dart';
 import '../view/screens/auth/login_screen.dart';
@@ -15,7 +16,7 @@ class AppRoutes{
   static final routes=[
     GetPage(name: Routes.welcomeScreen, page:()=> const WelcomeScreen()),
     GetPage(name: Routes.loginscreen, page:()=> LoginScreen(),binding: AuthBinding()),
-    GetPage(name: Routes.signupscreen, page:()=>  SignUpScreen(),binding: AuthBinding()),
+    GetPage(name: Routes.signupscreen, page:()=>  SignUpScreen(),bindings: [AuthBinding(),MainBinding()]),
     GetPage(name: Routes.detailsensor, page:()=>  Sensor_detail()),
 
   ];
