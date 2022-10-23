@@ -19,9 +19,9 @@ class AppRoutes{
   static final routes=[
     GetPage(name: Routes.welcomeScreen, page:()=> const WelcomeScreen()),
     GetPage(name: Routes.loginscreen, page:()=> LoginScreen(),binding: AuthBinding()),
-    GetPage(name: Routes.signupscreen, page:()=>  SignUpScreen(),bindings: [AuthBinding(),MainBinding()]),
+    GetPage(name: Routes.signupscreen, page:()=>  SignUpScreen(),bindings: [AuthBinding()]),
     GetPage(name: Routes.detailsensor, page:()=>  Sensor_detail()),
-    GetPage(name: Routes.mainscreen, page:()=>  MainScreen()),
+    GetPage(name: Routes.mainscreen, page:()=>  MainScreen(),bindings: [MainBinding()]),
 
   ];
 }

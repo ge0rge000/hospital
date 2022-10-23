@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:helath/logic/controllers/main_controller.dart';
 import 'package:helath/utils/theme.dart';
+
+import '../../logic/controllers/main_controller.dart';
 class MainScreen extends StatelessWidget {
   MainScreen({Key? key}) : super(key: key);
 
