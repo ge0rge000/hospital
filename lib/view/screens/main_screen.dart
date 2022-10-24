@@ -19,46 +19,46 @@ class MainScreen extends StatelessWidget {
               actions: [
                 Icon(Icons.menu)
               ],
-              backgroundColor: Get.isDarkMode?mainColor:darkGreyClr,
+              backgroundColor: Colors.white,
               title: Text(controller.title[controller.currentIndex.value]),
               centerTitle: true,
             ),
-            backgroundColor: Get.isDarkMode? Colors.white:darkGreyClr,
+            backgroundColor: Colors.white,
             bottomNavigationBar: BottomNavigationBar(
-              backgroundColor: Get.isDarkMode?Colors.white:darkGreyClr,
+              backgroundColor: Colors.white,
               currentIndex: controller.currentIndex.value,
               type: BottomNavigationBarType.fixed,
 
               items: [
                 BottomNavigationBarItem(
-                  activeIcon: Icon(Icons.home,color: Get.isDarkMode?mainColor:pinkClr,),
+                  activeIcon: Icon(Icons.home,color: Colors.black,),
 
                   icon: Icon(Icons.home,
-                    color: Get.isDarkMode?Colors.black:Colors.white,
+                    color: Get.isDarkMode?Colors.black:Colors.black,
                   ),
                   label: '',
                 ),
                 BottomNavigationBarItem(
-                  activeIcon: Icon(Icons.category,color: Get.isDarkMode?mainColor:pinkClr,),
+                  activeIcon: Icon(Icons.category,color: Colors.black,),
 
                   icon: Icon(Icons.category,
-                    color: Get.isDarkMode?Colors.black:Colors.white,
+                    color: Get.isDarkMode?Colors.black:Colors.black,
                   ),
                   label: '',
                 ),
                 BottomNavigationBarItem(
-                  activeIcon: Icon(Icons.favorite,color: Get.isDarkMode?mainColor:pinkClr,),
+                  activeIcon: Icon(Icons.favorite,color: Colors.black,),
 
                   icon: Icon(Icons.favorite,
-                    color: Get.isDarkMode?Colors.black:Colors.white,
+                    color: Get.isDarkMode?Colors.black:Colors.black,
                   ),
                   label: '',
                 ),
                 BottomNavigationBarItem(
-                  activeIcon: Icon(Icons.settings,color: Get.isDarkMode?mainColor:pinkClr,),
+                  activeIcon: Icon(Icons.settings,color: Colors.black,),
 
                   icon: Icon(Icons.settings,
-                    color: Get.isDarkMode?Colors.black:Colors.white,
+                    color: Colors.black,
                   ),
                   label: '',
                 ),
