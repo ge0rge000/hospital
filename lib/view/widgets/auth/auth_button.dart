@@ -15,7 +15,7 @@ class AuthButton extends StatelessWidget {
         onPressed: onPressed,
         child: TextUtils(
        color: Colors.white,
-          text: "Sign Up",
+          text: text,
           fontSize: 10,
           fontWeight: FontWeight.bold,
         ));

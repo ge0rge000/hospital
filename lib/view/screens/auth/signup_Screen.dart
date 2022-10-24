@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:helath/view/widgets/text_utils.dart';
+import '../../../logic/apis/registercontroller.dart';
 import '../../../routes/routes.dart';
 import '../../../utils/my_string.dart';
 import '../../../utils/theme.dart';
@@ -12,9 +13,7 @@ import '../../widgets/auth/container_under.dart';
 class SignUpScreen extends StatelessWidget {
    SignUpScreen({Key? key}) : super(key: key);
    final fromKey=GlobalKey<FormState>();
-  final TextEditingController namecontroller=TextEditingController();
-   final TextEditingController mobilephone=TextEditingController();
-   final TextEditingController address=TextEditingController();
+
 
    @override
   Widget build(BuildContext context) {
@@ -51,7 +50,7 @@ class SignUpScreen extends StatelessWidget {
                         height: 50,
                       ),
                       AuthTextFromFiled(
-                        controller: namecontroller,
+                        controller: RegisterController.namecontroller,
                         obscureText: false,
                         type_keyboard: TextInputType.text
                         , validator: (value){
@@ -64,7 +63,7 @@ class SignUpScreen extends StatelessWidget {
                         prefixIcon: Icon(Icons.drive_file_rename_outline,color:mainColor,), hintText: 'name',),
                       SizedBox(height: 25,),
                       AuthTextFromFiled(
-                        controller: mobilephone,
+                        controller: RegisterController.mobilephone,
                         obscureText: false,
                         type_keyboard: TextInputType.number
                         , validator: (value){
@@ -80,7 +79,7 @@ class SignUpScreen extends StatelessWidget {
                         prefixIcon: Icon(Icons.mobile_friendly_sharp,color:mainColor,), hintText: 'mobile phone',),
                       SizedBox(height: 25,),
                   AuthTextFromFiled(
-                  controller: address,
+                  controller: RegisterController.address,
                   obscureText: false,
                   type_keyboard: TextInputType.text
                     , validator: (value){
@@ -95,7 +94,7 @@ class SignUpScreen extends StatelessWidget {
                       SizedBox(height: 35),
                       CheckWidget(),
                       SizedBox(height: 35,),
-                      AuthButton(onPressed: () {  }, text: '',),
+                      AuthButton(onPressed:  RegisterController.registerwithmobile, text: 'sign',)
 
 
                     ],
