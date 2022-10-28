@@ -14,6 +14,7 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../routes/routes.dart';
+import '../controllers/auth_controller.dart';
 
 
 class RegisterController extends GetxController{
@@ -23,8 +24,12 @@ class RegisterController extends GetxController{
 
 
   static  final Future<SharedPreferences> _prefs=SharedPreferences.getInstance();
+
   static  Future<void> registerwithmobile() async
   {
+    final controller=Get.find<AuthController>();
+
+    controller.fetchData();
      var device =DeviceInfoPlugin();
 
        var andriodinfo=await device.androidInfo;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:helath/utils/theme.dart';
 
+import 'package:helath/utils/theme.dart';
 import '../../logic/controllers/main_controller.dart';
 class MainScreen extends StatelessWidget {
   MainScreen({Key? key}) : super(key: key);
@@ -17,9 +17,12 @@ class MainScreen extends StatelessWidget {
               elevation: 0,
               leading: Container(),
               actions: [
-                Icon(Icons.menu)
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Icon(Icons.menu),
+                )
               ],
-              backgroundColor: Colors.white,
+              backgroundColor: mainColor,
               title: Text(controller.title[controller.currentIndex.value]),
               centerTitle: true,
             ),

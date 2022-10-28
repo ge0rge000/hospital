@@ -8,6 +8,7 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import '../../routes/routes.dart';
+import '../controllers/auth_controller.dart';
 
 class LoginController extends GetxController{
 
@@ -19,6 +20,8 @@ class LoginController extends GetxController{
   static Future<void> loginwithmobile() async
   {
     if(mobilephone.text!=null){
+      final controller=Get.find<AuthController>();
+      controller.fetchData();
       var device =DeviceInfoPlugin();
       var andriodinfo=await device.androidInfo;
       print(andriodinfo.id);

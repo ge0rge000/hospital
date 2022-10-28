@@ -20,7 +20,7 @@ class MainController extends GetxController{
   ].obs;
 
   final title=[
-    "First Health",
+    "Health APP",
     "Catogeries",
     "Favourities",
     "Setting",

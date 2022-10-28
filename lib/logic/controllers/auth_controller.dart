@@ -13,10 +13,16 @@ class AuthController extends GetxController{
   final TextEditingController address=TextEditingController();
   ///getx update
   bool isCheckbox=false;
+   bool isLoading = false;
+
+  String data = '';
   void checkbox(){
     isCheckbox=! isCheckbox;
     update();
   }
-
+  void fetchData() async {
+    isLoading=true;
+    update();
+  }
 
 }

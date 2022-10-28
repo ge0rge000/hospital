@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:helath/view/widgets/text_utils.dart';
 import '../../../logic/apis/logincontroller.dart';
+import '../../../logic/controllers/auth_controller.dart';
 import '../../../routes/routes.dart';
 import '../../../utils/my_string.dart';
 import '../../../utils/theme.dart';
@@ -12,7 +13,7 @@ import '../../widgets/auth/container_under.dart';
 class LoginScreen extends StatelessWidget {
     LoginScreen({Key? key}) : super(key: key);
   final fromKey=GlobalKey<FormState>();
-
+    final controller=Get.find<AuthController>();
   @override
   Widget build(BuildContext context) {
     return SafeArea(child:
@@ -69,8 +70,10 @@ class LoginScreen extends StatelessWidget {
 
                       SizedBox(height: 35,),
 
-                      AuthButton(onPressed: LoginController.loginwithmobile, text: 'login',)
 
+                      controller.isLoading==false?
+                      AuthButton(onPressed: LoginController.loginwithmobile, text: 'login',):
+                      CircularProgressIndicator(),
 
                     ],
                   ) ,
