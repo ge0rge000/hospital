@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:helath/utils/theme.dart';
 import 'package:helath/view/widgets/text_utils.dart';
+
+import '../widgets/sensor/Card_items.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var isDark;
     return Scaffold(
       backgroundColor: Colors.white,
     body:Column(
@@ -49,7 +53,28 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-        )
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: TextUtils(
+                fontSize: 20,
+                text:"Sensors" ,
+                fontWeight: FontWeight.w500,
+                color: Get.isDarkMode?Colors.white:Colors.black,
+
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 25,
+        ),
+        CardItems(),
+
       ],
     )
     );
