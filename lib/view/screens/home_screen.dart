@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:helath/utils/theme.dart';
 import 'package:helath/view/widgets/text_utils.dart';
 
-import '../widgets/sensor/Card_items.dart';
+import '../widgets/sensor/Sensor_Items.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -73,7 +73,7 @@ class HomeScreen extends StatelessWidget {
         SizedBox(
           height: 25,
         ),
-        CardItems(),
+        SensorItems(),
 
       ],
     )

@@ -3,8 +3,8 @@ import 'package:helath/utils/theme.dart';
 import 'package:helath/view/widgets/text_utils.dart';
 
 
-class CardItems extends StatelessWidget {
-  const CardItems({Key? key}) : super(key: key);
+class SensorItems extends StatelessWidget {
+  const SensorItems({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +62,7 @@ Widget buildCardItems(){
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Image.network("https://images.unsplash.com/photo-1666883838711-052a00418d5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+            child: Image.network("https://media.wired.com/photos/59265243cfe0d93c4742fc60/master/w_2560%2Cc_limit/00_a_hardware_closeup-TA.jpg",
             fit: BoxFit.cover,
               height: 100,
             ),
