@@ -13,8 +13,9 @@ import 'package:helath/utils/api_endpoints.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../logic/controllers/auth_controller.dart';
 import '../../routes/routes.dart';
-import '../controllers/auth_controller.dart';
+
 
 
 class RegisterController extends GetxController{

@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:helath/logic/bindings/main_binding.dart';
 
 import '../logic/bindings/auth_binding.dart';
+import '../logic/bindings/sensor_binding.dart';
 import '../view/screens/auth/login_screen.dart';
 import '../view/screens/auth/signup_Screen.dart';
 import '../view/screens/main_screen.dart';
@@ -21,7 +22,7 @@ class AppRoutes{
     GetPage(name: Routes.loginscreen, page:()=> LoginScreen(),binding: AuthBinding()),
     GetPage(name: Routes.signupscreen, page:()=>  SignUpScreen(),bindings: [AuthBinding()]),
     GetPage(name: Routes.detailsensor, page:()=>  Sensor_detail()),
-    GetPage(name: Routes.mainscreen, page:()=>  MainScreen(),bindings: [MainBinding()]),
+    GetPage(name: Routes.mainscreen, page:()=>  MainScreen(),bindings: [MainBinding(),SensorBindings()]),
 
   ];
 }

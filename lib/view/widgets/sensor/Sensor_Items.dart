@@ -1,32 +1,53 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:helath/utils/theme.dart';
 import 'package:helath/view/widgets/text_utils.dart';
 
+import '../../../logic/controllers/SensorController.dart';
+
 
 class SensorItems extends StatelessWidget {
-  const SensorItems({Key? key}) : super(key: key);
-
+   SensorItems({Key? key}) : super(key: key);
+  final controller =Get.find<SensorController>();
   @override
   Widget build(BuildContext context) {
-    return  Expanded(
-      child: GridView.builder(
-          itemCount: 10,
-          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent:200,
-          childAspectRatio: 0.8,
-      mainAxisSpacing: 9.0,
-      crossAxisSpacing: 6.0,
+    return   Obx(
 
-      ),
-      itemBuilder: (BuildContext context,  index) {
-      return buildCardItems();
-      },
-      ),
+            (){
+          if(controller.isloading.value){
+            return Center(
+              child: CircularProgressIndicator(
+                color: mainColor,
+              ),
+            );
+          }else{
+            return  Expanded(
+              child: GridView.builder(
+                itemCount: controller.sensorslists.length,
+                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent:200,
+                  childAspectRatio: 0.8,
+                  mainAxisSpacing: 9.0,
+                  crossAxisSpacing: 6.0,
+
+                ),
+                itemBuilder: (BuildContext context,  index) {
+                  return buildSensorItems(image: controller.sensorslists[index].imageSensor, name: controller.sensorslists[index].nameSensor);
+                },
+              ),
+            );
+          }
+        }
     );
+
   }
 
 }
-Widget buildCardItems(){
+Widget buildSensorItems(
+{
+  required String image,required String name
+}){
   return Padding(
     padding: EdgeInsets.all(5.0),
     child: Container(
@@ -34,13 +55,14 @@ Widget buildCardItems(){
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
+            color: Colors.grey.withOpacity(0.1),
             spreadRadius: 3.0,
             blurRadius: 5.0,
           ),
         ],
       ),
       child: Column(
+
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -62,34 +84,33 @@ Widget buildCardItems(){
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Image.network("https://media.wired.com/photos/59265243cfe0d93c4742fc60/master/w_2560%2Cc_limit/00_a_hardware_closeup-TA.jpg",
+            child: Image.network('https://backend.lechefhany.com/sensors/sensorsimages/'+image,
             fit: BoxFit.cover,
               height: 100,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15,right: 15,top:2),
+          SizedBox(height: 5,),
+          Center(
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("\$25",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
                 Container(
-                  height: 20,
-                  width: 45,
+                  height: 35,
+                  width: 100,
                   decoration: BoxDecoration(
                     color: mainColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Padding(padding: EdgeInsets.only(left: 3,right: 2),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         TextUtils(
                             fontSize: 13,
-                            text: "4.8",
+                            text: name,
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
-                        Icon(Icons.star,size: 13,color: Colors.white,),
+
                       ],
                     ),
 
