@@ -84,7 +84,7 @@ Widget buildSensorItems(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Image.network('https://backend.lechefhany.com/sensors/sensorsimages/'+image,
+            child: Image.network('https://hospital.lechefhany.com/sensors/sensorsimages/'+image,
             fit: BoxFit.cover,
               height: 100,
             ),
