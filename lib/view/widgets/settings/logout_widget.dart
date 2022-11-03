@@ -6,10 +6,13 @@ import 'package:helath/view/widgets/text_utils.dart';
 import '../../../logic/controllers/settings_controller.dart';
 
 
+
 class LogoutWidget extends StatelessWidget {
    LogoutWidget({Key? key}) : super(key: key);
   final controller=Get.find<SettingController>();
-  @override
+
+
+   @override
   Widget build(BuildContext context) {
     return GetBuilder<SettingController>(builder: (_)=> Material(
       color: Colors.transparent,
@@ -37,8 +40,8 @@ class LogoutWidget extends StatelessWidget {
               onCancel: (){
                 Get.back();
               },
-              onConfirm: (){
-                print("he");
+              onConfirm: () async {
+          print("hhh");
               },
               buttonColor: mainColor
           );

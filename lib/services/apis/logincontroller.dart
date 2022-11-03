@@ -9,10 +9,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import '../../logic/controllers/auth_controller.dart';
 import '../../routes/routes.dart';
+import 'package:get_storage/get_storage.dart';
 
 class LoginController extends GetxController{
 
   static final TextEditingController mobilephone=TextEditingController();
+
 
 
 
@@ -36,9 +38,12 @@ class LoginController extends GetxController{
         if (response.statusCode==200){
           final json =jsonDecode(response.body);
           var token=json['token'];
+          var type=json['data']['usertype'];
           print(token);
           final SharedPreferences? prefs =await _prefs;
           await prefs?.setString('token', token);
+          await prefs?.setString('type', type);
+
           mobilephone.clear();
           Get.offNamed(Routes.mainscreen);
         }else{

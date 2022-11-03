@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:helath/logic/controllers/settings_controller.dart';
+
 import 'package:helath/utils/theme.dart';
 import 'package:helath/view/widgets/text_utils.dart';
 
+import '../widgets/doctors/doctor_appointment.dart';
 import '../widgets/settings/logout_widget.dart';
+import 'package:get_storage/get_storage.dart';
+
 
 class SettingScreen extends StatelessWidget {
-  const SettingScreen({Key? key}) : super(key: key);
-
-  @override
+   SettingScreen({Key? key}) : super(key: key);
+   final box = GetStorage();
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body:ListView(
@@ -19,9 +24,10 @@ class SettingScreen extends StatelessWidget {
           const SizedBox(height: 20,),
           TextUtils(fontSize: 18, text: "General", fontWeight: FontWeight.bold, color: mainColor,),
           const SizedBox(height: 20,),
-          //Language Widget()
+
+          DoctorAppointMent(),
           const SizedBox(height: 20,),
-          LogoutWidget()
+          LogoutWidget(),
         ],
       ) ,
     );
