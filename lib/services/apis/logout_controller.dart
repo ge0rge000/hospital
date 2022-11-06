@@ -22,21 +22,21 @@ class LogoutController extends GetxController{
   {
 
 
-      try{
-        var headers={'Content-Type':'application/json','token':SharedHelper.get(key: 'token').toString()};
-        var url=Uri.parse(ApiEndPoints.baseURl+ApiEndPoints.authEndPoints.logout);
+    try{
+      var headers={'Content-Type':'application/json','token':SharedHelper.get(key: 'token').toString()};
+      var url=Uri.parse(ApiEndPoints.baseURl+ApiEndPoints.authEndPoints.logout);
 
-        http.Response response=await http.post(url,headers: headers);
-        if (response.statusCode==200){
-          final json =jsonDecode(response.body);
-          SharedHelper.clearData();
-          Get.offNamed(Routes.loginscreen);
-        }else{
-          print("no login");
-        }
-      }catch(e){
-        print(e);
+      http.Response response=await http.post(url,headers: headers);
+      if (response.statusCode==200){
+        final json =jsonDecode(response.body);
+        SharedHelper.clearData();
+        Get.offNamed(Routes.loginscreen);
+      }else{
+        print("no login");
       }
+    }catch(e){
+      print(e);
+    }
 
   }
 }

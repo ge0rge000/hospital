@@ -3,14 +3,12 @@ import 'package:get/get.dart';
 import 'package:helath/routes/routes.dart';
 import 'package:helath/view/screens/welcome_screen.dart';
 
-<<<<<<< Updated upstream
-import 'view/screens/sesnors/sensor_detail.dart';
-=======
-import 'view/screens/main_screen.dart';
->>>>>>> Stashed changes
+import 'logic/local/shared.dart';
 
-void main() {
+Future<void> main() async {
   runApp(const MyApp());
+
+  await SharedHelper.init();
 }
 
 class MyApp extends StatelessWidget {
@@ -25,10 +23,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WelcomeScreen(),
+      home: const WelcomeScreen(),
+
       initialRoute: AppRoutes.welcome,
       getPages:
-        AppRoutes.routes
+      AppRoutes.routes
       ,
     );
   }

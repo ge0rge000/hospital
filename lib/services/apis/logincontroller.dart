@@ -19,7 +19,7 @@ class LoginController extends GetxController{
 
 
 
-   static Future<void> loginwithmobile() async
+  static Future<void> loginwithmobile() async
   {
     if(mobilephone.text!=null){
       final controller=Get.find<AuthController>();
@@ -53,6 +53,6 @@ class LoginController extends GetxController{
       }
     }
   }
-  }
+}
 
 

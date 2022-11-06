@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:helath/logic/controllers/SensorController.dart';
 import 'package:helath/model/Sensor_model.dart';
 
 import '../../widgets/sensor/image_sensor.dart';
@@ -8,10 +9,10 @@ import '../../widgets/sensor/image_sensor.dart';
 
 class Sensor_detail extends StatelessWidget {
 
-  final SensorModel sensorModel;
+  final controller =Get.find<SensorController>();
 
 
-  const Sensor_detail({Key? key, required this.sensorModel}) : super(key: key);
+    Sensor_detail({Key? key,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +23,13 @@ class Sensor_detail extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
           children: [
            ImageSlider(
-             imageUrl: sensorModel.imageSensor,
+             imageUrl: controller.sensorslists[].imageSensor,
            ),
 
 
 
           ],
+
         ),
       ),
     );
