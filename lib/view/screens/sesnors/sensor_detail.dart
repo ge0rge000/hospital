@@ -12,7 +12,7 @@ import '../../../utils/theme.dart';
 class Sensor_detail extends StatelessWidget {
 
  Sensor_detail({ Key? key,}) : super(key: key);
-final controller =Get.find<SensorController>();
+final controller = Get.find<SensorController>();
 
   @override
   Widget build(BuildContext context) {
@@ -21,26 +21,21 @@ final controller =Get.find<SensorController>();
     return Obx(
             (){
   if(controller.isloading.value) {
-    return Center(
+    return const Center(
       child: CircularProgressIndicator(
         color: mainColor,
       ),
     );
   }else{
-    return Scaffold(
+    return GetBuilder(builder: (SensorController)=> Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          controller.sensorslists[0].nameSensor,
+          style: const TextStyle(color: Colors.black, fontSize: 50),),
+      ],
+    ),);
 
-      body: SingleChildScrollView(
-
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              controller.sensorsspecify[0].nameSensor, style: TextStyle(color: Colors.black, fontSize: 50),),
-          ],
-
-        ),
-      ),
-    );
   }
    }
     );

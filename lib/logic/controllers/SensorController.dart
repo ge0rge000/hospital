@@ -14,7 +14,7 @@ class SensorController extends GetxController{
   void onInit() {
     super.onInit();
     getSensors();
-    getspecifysensor(idsensor);
+    getspecifysensor();
   }
   void getSensors()async{
 
@@ -28,10 +28,10 @@ class SensorController extends GetxController{
       isloading(false);
     }
   }
-  void getspecifysensor($id)async{
+  void getspecifysensor()async{
   print(";sdadsadad");
 
-    var sensor= await SensorService.getspecifysensor($id);
+    var sensor= await SensorService.getspecifysensor();
     try{
       isloading(true);
       if(sensor!=null){

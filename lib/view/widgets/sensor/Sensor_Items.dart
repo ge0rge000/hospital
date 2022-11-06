@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -58,6 +60,7 @@ Widget buildSensorItems(
     child: Padding(
       padding: EdgeInsets.all(5.0),
       child: Container(
+
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           boxShadow: [
@@ -68,68 +71,75 @@ Widget buildSensorItems(
             ),
           ],
         ),
-        child: Column(
+        child:  SingleChildScrollView(
+          child: Column(
 
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+
               children: [
-                IconButton(onPressed: (){},
-                  icon: Icon(Icons.favorite_border_outlined,
-                    color: Colors.black,
-                  ),),
-                IconButton(onPressed: (){},
-                  icon: Icon(Icons.add,
-                    color: Colors.black,
-                  ),),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(onPressed: (){},
+                      icon: Icon(Icons.favorite_border_outlined,
+                        color: Colors.black,
+                      ),),
+                    IconButton(onPressed: (){},
+                      icon: Icon(Icons.add,
+                        color: Colors.black,
+                      ),),
+                  ],
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 140,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Image.network('https://hospital.lechefhany.com/sensors/sensorsimages/'+image,
+                  fit: BoxFit.cover,
+                    height: 40,
+                  ),
+                ),
+                SizedBox(height: 5,),
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 35,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          color: mainColor,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Padding(padding: EdgeInsets.only(left: 3,right: 2),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              TextUtils(
+                                  fontSize: 13,
+                                  text: name,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+
+                            ],
+                          ),
+
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
-            Container(
-              width: double.infinity,
-              height: 140,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Image.network('https://hospital.lechefhany.com/sensors/sensorsimages/'+image,
-              fit: BoxFit.cover,
-                height: 40,
-              ),
-            ),
-            SizedBox(height: 5,),
-            Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 35,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      color: mainColor,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Padding(padding: EdgeInsets.only(left: 3,right: 2),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextUtils(
-                              fontSize: 13,
-                              text: name,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-
-                        ],
-                      ),
-
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
+        ),
         ),
       ),
-    ),
+    
   );
 }
 
