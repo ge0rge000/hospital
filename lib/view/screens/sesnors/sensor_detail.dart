@@ -4,34 +4,44 @@ import 'package:get/get.dart';
 import 'package:helath/logic/controllers/SensorController.dart';
 import 'package:helath/model/Sensor_model.dart';
 
-import '../../widgets/sensor/image_sensor.dart';
+import '../../../utils/theme.dart';
+
+
 
 
 class Sensor_detail extends StatelessWidget {
 
-  final controller =Get.find<SensorController>();
-
-
-    Sensor_detail({Key? key,}) : super(key: key);
+ Sensor_detail({ Key? key,}) : super(key: key);
+final controller =Get.find<SensorController>();
 
   @override
   Widget build(BuildContext context) {
+    var idsensor=Get.arguments;
+
+    return Obx(
+            (){
+  if(controller.isloading.value) {
+    return Center(
+      child: CircularProgressIndicator(
+        color: mainColor,
+      ),
+    );
+  }else{
     return Scaffold(
-      backgroundColor: context.theme.backgroundColor,
+
       body: SingleChildScrollView(
+
         child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-           ImageSlider(
-             imageUrl: controller.sensorslists[].imageSensor,
-           ),
-
-
-
+            Text(
+              controller.sensorsspecify[0].nameSensor, style: TextStyle(color: Colors.black, fontSize: 50),),
           ],
 
         ),
       ),
     );
   }
-}
+   }
+    );
+}}

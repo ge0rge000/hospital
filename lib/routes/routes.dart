@@ -11,6 +11,7 @@ import '../view/screens/main_screen.dart';
 import '../view/screens/sesnors/sensor_detail.dart';
 import '../view/screens/settings_screen.dart';
 import '../view/screens/welcome_screen.dart';
+import 'package:helath/model/Sensor_model.dart';
 
 class AppRoutes{
 
@@ -25,7 +26,6 @@ class AppRoutes{
     GetPage(name: Routes.welcomeScreen, page:()=> const WelcomeScreen()),
     GetPage(name: Routes.loginscreen, page:()=> LoginScreen(),binding: AuthBinding()),
     GetPage(name: Routes.signupscreen, page:()=>  SignUpScreen(),bindings: [AuthBinding()]),
-    GetPage(name: Routes.detailsensor, page:()=>  Sensor_detail(sensorModel: SensorModel(),)),
     GetPage(name: Routes.mainscreen, page:()=>  MainScreen(),bindings: [MainBinding(),SensorBindings()]),
     GetPage(name: Routes.mainscreen, page:()=>  SettingScreen(),bindings: [ SettingBindings()]),
 
