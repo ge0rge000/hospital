@@ -44,6 +44,8 @@ dependencies:
   firebase_core: ^1.24.0
   shared_preferences: ^2.0.15
   device_info_plus: ^7.0.1
+  smooth_page_indicator: ^1.0.0+2
+  carousel_slider: ^4.1.1
 
 
 

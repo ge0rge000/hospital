@@ -1,26 +1,31 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:helath/model/Sensor_model.dart';
 
 import '../../widgets/sensor/image_sensor.dart';
 
 
 class Sensor_detail extends StatelessWidget {
 
+  final SensorModel sensorModel;
 
-  const Sensor_detail({Key? key}) : super(key: key);
+
+  const Sensor_detail({Key? key, required this.sensorModel}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: context.theme.backgroundColor,
       body: SingleChildScrollView(
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 35,),
-            SizedBox(height: 35,),
-            Image.network('https://picsum.photos/250?image=9'),
+           ImageSlider(
+             imageUrl: sensorModel.imageSensor,
+           ),
+
+
 
           ],
         ),

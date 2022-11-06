@@ -5,6 +5,7 @@ import '../../utils/theme.dart';
 import '../widgets/text_utils.dart';
 import 'auth/login_screen.dart';
 import 'auth/signup_Screen.dart';
+import 'sesnors/sensor_detail.dart';
 
 class WelcomeScreen extends StatelessWidget {
 
@@ -69,7 +70,7 @@ class WelcomeScreen extends StatelessWidget {
                       vertical: 12
                     )),
                 onPressed: (){
-                  Get.offNamed(Routes.loginscreen);
+                  Get.offNamed(Routes.detailsensor);
             }, child: TextUtils(
               text: "Get Start",
               color: Colors.white,

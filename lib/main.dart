@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:helath/routes/routes.dart';
 import 'package:helath/view/screens/welcome_screen.dart';
 
+import 'view/screens/sesnors/sensor_detail.dart';
+
 void main() {
   runApp(const MyApp());
 }

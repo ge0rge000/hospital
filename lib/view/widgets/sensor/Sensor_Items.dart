@@ -86,7 +86,7 @@ Widget buildSensorItems(
             ),
             child: Image.network('https://hospital.lechefhany.com/sensors/sensorsimages/'+image,
             fit: BoxFit.cover,
-              height: 100,
+              height: 40,
             ),
           ),
           SizedBox(height: 5,),

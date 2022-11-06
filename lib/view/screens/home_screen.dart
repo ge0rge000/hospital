@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(16.0),
                     child: Image.asset('assets/images/dr.png',
-                      width: 150,
+                      width:150,
                       height: 130,
                     ),
                   ),
