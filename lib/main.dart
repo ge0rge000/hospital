@@ -3,8 +3,12 @@ import 'package:get/get.dart';
 import 'package:helath/routes/routes.dart';
 import 'package:helath/view/screens/welcome_screen.dart';
 
-void main() {
+import 'logic/local/shared.dart';
+
+Future<void> main() async {
   runApp(const MyApp());
+
+  await SharedHelper.init();
 }
 
 class MyApp extends StatelessWidget {
@@ -20,6 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const WelcomeScreen(),
+
       initialRoute: AppRoutes.welcome,
       getPages:
         AppRoutes.routes

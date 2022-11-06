@@ -4,6 +4,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:helath/utils/theme.dart';
 import 'package:helath/view/widgets/text_utils.dart';
 import '../../../logic/controllers/settings_controller.dart';
+import '../../../services/apis/logout_controller.dart';
 
 
 
@@ -41,7 +42,7 @@ class LogoutWidget extends StatelessWidget {
                 Get.back();
               },
               onConfirm: () async {
-          print("hhh");
+                LogoutController.logoutwithmobile();
               },
               buttonColor: mainColor
           );
