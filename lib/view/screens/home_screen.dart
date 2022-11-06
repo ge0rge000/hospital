@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+<<<<<<< Updated upstream
 import 'package:get/get.dart';
 import 'package:helath/utils/theme.dart';
 import 'package:helath/view/widgets/text_utils.dart';
 
 import '../widgets/sensor/Sensor_Items.dart';
 
+=======
+>>>>>>> Stashed changes
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< Updated upstream
     var isDark;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -77,6 +81,10 @@ class HomeScreen extends StatelessWidget {
 
       ],
     )
+=======
+    return Center(
+      child: Text('HomeScreen',style: TextStyle(color: Colors.white),),
+>>>>>>> Stashed changes
     );
   }
 }

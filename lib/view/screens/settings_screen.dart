@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+<<<<<<< Updated upstream
 import 'package:helath/utils/theme.dart';
 import 'package:helath/view/widgets/text_utils.dart';
 
 import '../widgets/settings/logout_widget.dart';
 
+=======
+>>>>>>> Stashed changes
 class SettingScreen extends StatelessWidget {
   const SettingScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< Updated upstream
     return Scaffold(
       body:ListView(
         padding: const EdgeInsets.all(24),
@@ -24,6 +28,10 @@ class SettingScreen extends StatelessWidget {
           LogoutWidget()
         ],
       ) ,
+=======
+    return Center(
+      child: Text('SettingScreen',style: TextStyle(color: Colors.white),),
+>>>>>>> Stashed changes
     );
   }
 }

@@ -1,6 +1,9 @@
 import 'package:get/get.dart';
 import 'package:helath/logic/bindings/main_binding.dart';
+<<<<<<< Updated upstream
 import 'package:helath/model/Sensor_model.dart';
+=======
+>>>>>>> Stashed changes
 
 import '../logic/bindings/auth_binding.dart';
 import '../logic/bindings/sensor_binding.dart';
@@ -21,10 +24,14 @@ class AppRoutes{
   static final routes=[
     GetPage(name: Routes.welcomeScreen, page:()=> const WelcomeScreen()),
     GetPage(name: Routes.loginscreen, page:()=> LoginScreen(),binding: AuthBinding()),
+<<<<<<< Updated upstream
     GetPage(name: Routes.signupscreen, page:()=>  SignUpScreen(),bindings: [AuthBinding()]),
     GetPage(name: Routes.detailsensor, page:()=>  Sensor_detail(
       sensorModel:controller.sensorslists[index],)),
     GetPage(name: Routes.mainscreen, page:()=>  MainScreen(),bindings: [MainBinding(),SensorBindings()]),
+=======
+    GetPage(name: Routes.signupscreen, page:()=>  SignUpScreen(),bindings: [AuthBinding(),MainBinding()]),
+>>>>>>> Stashed changes
 
   ];
 }
