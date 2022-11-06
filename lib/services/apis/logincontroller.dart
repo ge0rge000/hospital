@@ -8,7 +8,9 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import '../../logic/controllers/auth_controller.dart';
+import '../../logic/local/shared.dart';
 import '../../routes/routes.dart';
+import 'package:get_storage/get_storage.dart';
 
 class LoginController extends GetxController{
 
@@ -16,8 +18,8 @@ class LoginController extends GetxController{
 
 
 
-  static final Future<SharedPreferences> _prefs=SharedPreferences.getInstance();
-  static Future<void> loginwithmobile() async
+
+   static Future<void> loginwithmobile() async
   {
     if(mobilephone.text!=null){
       final controller=Get.find<AuthController>();
@@ -36,9 +38,11 @@ class LoginController extends GetxController{
         if (response.statusCode==200){
           final json =jsonDecode(response.body);
           var token=json['token'];
+          var type=json['data']['usertype'];
           print(token);
-          final SharedPreferences? prefs =await _prefs;
-          await prefs?.setString('token', token);
+          SharedHelper.put(key: 'token', value: token);
+          SharedHelper.put(key: 'type', value: type);
+          print(SharedHelper.get(key: 'type'));
           mobilephone.clear();
           Get.offNamed(Routes.mainscreen);
         }else{
