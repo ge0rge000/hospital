@@ -3,8 +3,6 @@ import 'package:helath/utils/my_string.dart';
 import 'package:http/http.dart' as http;
 
 import '../model/Sensor_model.dart';
-
-
 class SensorService{
 
   static  Future <List<SensorModel>> getSensors()async{
@@ -18,9 +16,9 @@ class SensorService{
   }
 
   static  Future<SensorSpecifyModel> getspecifysensor(id)async{
-    var response= await http.get(Uri.parse('$baseUrl/sensors/'+'$id'));
+    print("afdgfdgdgsd");
+    var response= await http.get(Uri.parse('$baseUrl/sensors/'+id));
     if(response.statusCode==200){
-      print("sdsdfsdfdsfsdfsdfsdfsdfsd");
       var jsonData=response.body;
       return sensorSpecifyModelFromJson(jsonData);
     }else{

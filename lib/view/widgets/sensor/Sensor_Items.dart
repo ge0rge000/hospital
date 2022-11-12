@@ -52,7 +52,7 @@ Widget buildSensorItems(
 }){
   return GestureDetector(
     onTap: (){
-    Get.to(Sensor_detail(),arguments:  id_sensor);
+    Get.to(()=>Sensor_detail(),arguments:  id_sensor);
     },
 
     child: Padding(

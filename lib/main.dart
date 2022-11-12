@@ -7,6 +7,7 @@ import 'logic/local/shared.dart';
 
 Future<void> main() async {
   runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
 
   await SharedHelper.init();
 }

@@ -1,11 +1,13 @@
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_instance/src/bindings_interface.dart';
-import 'package:helath/logic/controllers/SensorController.dart';
 
-class SensorBindings extends Bindings{
+import 'package:get/get.dart';
+import 'package:get/instance_manager.dart';
+import 'package:helath/logic/controllers/SensorDetailController.dart';
+
+class SensorBinding extends Bindings{
   @override
   void dependencies() {
-    Get.put(SensorController());
+
+    Get.put(SensorDetailController());
+
   }
 }
