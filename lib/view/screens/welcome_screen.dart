@@ -19,7 +19,7 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              child: Image.asset('assets/images/logobegin.jpg',
+              child: Image.asset('assets/images/dr.png',
               fit: BoxFit.fitWidth,
               ),
             ),

@@ -42,9 +42,9 @@ class MainScreen extends StatelessWidget {
                   label: '',
                 ),
                 BottomNavigationBarItem(
-                  activeIcon: Icon(Icons.category,color: Colors.black,),
+                  activeIcon: Icon(Icons.devices_other,color: Colors.black,),
 
-                  icon: Icon(Icons.category,
+                  icon: Icon(Icons.devices_other,
                     color: Get.isDarkMode?Colors.black:Colors.black,
                   ),
                   label: '',
@@ -57,14 +57,14 @@ class MainScreen extends StatelessWidget {
                   ),
                   label: '',
                 ),
-                BottomNavigationBarItem(
-                  activeIcon: Icon(Icons.settings,color: Colors.black,),
-
-                  icon: Icon(Icons.settings,
-                    color: Colors.black,
-                  ),
-                  label: '',
-                ),
+                // BottomNavigationBarItem(
+                //   activeIcon: Icon(Icons.settings,color: Colors.black,),
+                //
+                //   icon: Icon(Icons.settings,
+                //     color: Colors.black,
+                //   ),
+                //   label: '',
+                // ),
               ],
               onTap: (index){
                 controller.currentIndex.value=index;

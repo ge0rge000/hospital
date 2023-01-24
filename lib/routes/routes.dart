@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:helath/logic/bindings/main_binding.dart';
 import 'package:helath/logic/bindings/sensor_binding.dart';
+import 'package:helath/logic/bindings/sensor_read_binding.dart';
+import 'package:helath/view/screens/sensor_read_screen.dart';
 
 import '../logic/bindings/auth_binding.dart';
 import '../logic/bindings/setting_binding.dart';
@@ -27,6 +29,7 @@ class AppRoutes{
     GetPage(name: Routes.mainscreen, page:()=>  MainScreen(),bindings: [MainBinding(),]),
     GetPage(name: Routes.settings, page:()=>  SettingScreen(),bindings: [ SettingBindings()]),
     GetPage(name: Routes.detailsensor, page:()=>  Sensor_detail(),bindings: [MainBinding()]),
+    GetPage(name: Routes.sensorreading, page:()=>  SensorReadScreen(),bindings: [MainBinding()]),
 
   ];
 }
@@ -37,5 +40,6 @@ class Routes{
   static const signupscreen='/signupscreen';
   static const detailsensor='/detailsensor';
   static const mainscreen='/mainscreen';
+  static const sensorreading='/sensorreading';
   static const settings='/sertings';
 }

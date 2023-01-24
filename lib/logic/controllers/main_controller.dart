@@ -3,9 +3,8 @@
 
 import 'package:get/get.dart';
 import 'package:helath/view/screens/home_screen.dart';
-import 'package:helath/view/screens/sesnors/catogery_screen.dart';
-import 'package:helath/view/screens/sesnors/favourite_screen.dart';
-import 'package:helath/view/screens/settings_screen.dart';
+import 'package:helath/view/screens/sensor_read_screen.dart';
+ import 'package:helath/view/screens/sesnors/favourite_screen.dart';
 
 
 class MainController extends GetxController{
@@ -14,15 +13,14 @@ class MainController extends GetxController{
 
   final tabs=[
     HomeScreen(),
-    CatogeryScreen(),
+    SensorReadScreen(),
     FavouriteScreen(),
-    SettingScreen(),
+
   ].obs;
 
   final title=[
     "Health APP",
-    "Catogeries",
+    "sensors Readings",
     "Favourities",
-    "Setting",
   ].obs;
 }

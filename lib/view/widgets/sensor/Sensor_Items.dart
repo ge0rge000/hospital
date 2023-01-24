@@ -35,7 +35,8 @@ class SensorItems extends StatelessWidget {
 
                 ),
                 itemBuilder: (BuildContext context,  index) {
-                  return buildSensorItems(image: controller.sensorslists[index].imageSensor, name: controller.sensorslists[index].nameSensor,
+                  return buildSensorItems(image: controller.sensorslists[index].imageSensor,
+                      name: controller.sensorslists[index].nameSensor,
                       id_sensor: controller.sensorslists[index].id.toString());
                 },
               ),

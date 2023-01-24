@@ -16,7 +16,6 @@ class SensorService{
   }
 
   static  Future<SensorSpecifyModel> getspecifysensor(id)async{
-    print("afdgfdgdgsd");
     var response= await http.get(Uri.parse('$baseUrl/sensors/'+id));
     if(response.statusCode==200){
       var jsonData=response.body;
