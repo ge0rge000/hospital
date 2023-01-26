@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDark;
+
     return Scaffold(
         backgroundColor: Colors.white,
         body:Column(

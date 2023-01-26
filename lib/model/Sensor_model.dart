@@ -4,9 +4,11 @@
 
 import 'dart:convert';
 
-List<SensorModel> sensorModelFromJson(String str) => List<SensorModel>.from(json.decode(str).map((x) => SensorModel.fromJson(x)));
+List<SensorModel> sensorModelFromJson(String str) => List<SensorModel>.from(
+    json.decode(str).map((x) => SensorModel.fromJson(x)));
 
-String sensorModelToJson(List<SensorModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String sensorModelToJson(List<SensorModel> data) => json.encode(
+    List<dynamic>.from(data.map((x) => x.toJson())));
 
 class SensorModel {
   SensorModel({

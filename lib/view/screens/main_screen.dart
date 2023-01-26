@@ -57,14 +57,8 @@ class MainScreen extends StatelessWidget {
                   ),
                   label: '',
                 ),
-                // BottomNavigationBarItem(
-                //   activeIcon: Icon(Icons.settings,color: Colors.black,),
-                //
-                //   icon: Icon(Icons.settings,
-                //     color: Colors.black,
-                //   ),
-                //   label: '',
-                // ),
+
+
               ],
               onTap: (index){
                 controller.currentIndex.value=index;

@@ -2,13 +2,17 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:helath/routes/routes.dart';
 import 'package:helath/utils/theme.dart';
+import 'package:helath/view/screens/PatientRead_screen.dart';
 
 import '../../logic/controllers/SensorController.dart';
+import '../../logic/local/shared.dart';
 
 class SensorReadScreen extends StatelessWidget {
    SensorReadScreen({Key? key}) : super(key: key);
    final controller =Get.find<SensorController>();
+
   var url_photo='https://hospital.lechefhany.com/sensors/sensorsimages/';
   @override
   Widget build(BuildContext context) {
@@ -33,7 +37,12 @@ class SensorReadScreen extends StatelessWidget {
                       height: 50,
                     ),
                     trailing:  ElevatedButton(
-                      onPressed: () {},
+
+                      onPressed: () => Get.toNamed(Routes.patientread,
+                          arguments: [
+                       {"id_patient":SharedHelper.get(key: 'id').toString()},
+                        {"id_sensor":controller.sensorslists[index].id.toString()}
+                          ,{"namesensor":controller.sensorslists[index].nameSensor.toString()}]),
                       child: Text('Readings'),
                       style: ElevatedButton.styleFrom(
                         backgroundColor:mainColor,

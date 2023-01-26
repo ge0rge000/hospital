@@ -7,11 +7,13 @@ import 'package:helath/view/screens/sensor_read_screen.dart';
  import 'package:helath/view/screens/sesnors/favourite_screen.dart';
 
 
+
 class MainController extends GetxController{
 
   RxInt currentIndex=0.obs;
 
   final tabs=[
+
     HomeScreen(),
     SensorReadScreen(),
     FavouriteScreen(),
@@ -22,5 +24,6 @@ class MainController extends GetxController{
     "Health APP",
     "sensors Readings",
     "Favourities",
+
   ].obs;
 }

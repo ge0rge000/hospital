@@ -6,7 +6,7 @@ import '../../services/sensor_services.dart';
 class SensorController extends GetxController{
   var sensorslists=<SensorModel>[].obs;
    var isloading=true.obs;
-  var idsensor=2;
+
     @override
   void onInit() {
     super.onInit();

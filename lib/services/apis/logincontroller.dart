@@ -39,10 +39,13 @@ class LoginController extends GetxController{
           final json =jsonDecode(response.body);
           var token=json['token'];
           var type=json['data']['usertype'];
+          var id=json['data']['id'];
           print(token);
           SharedHelper.put(key: 'token', value: token);
           SharedHelper.put(key: 'type', value: type);
-          print(SharedHelper.get(key: 'type'));
+          SharedHelper.put(key: 'id', value: id.toString());
+
+          print(SharedHelper.get(key: 'id'));
           mobilephone.clear();
           Get.offNamed(Routes.mainscreen);
         }else{

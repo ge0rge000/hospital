@@ -8,7 +8,6 @@ import 'package:helath/logic/controllers/settings_controller.dart';
 class SettingBindings extends Bindings{
   @override
   void dependencies() {
-    Get.put(MainController());
-    Get.put(SettingController());
+    Get.lazyPut(()=>SettingController());
   }
 }
