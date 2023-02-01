@@ -6,8 +6,8 @@ import 'package:helath/routes/routes.dart';
 import 'package:helath/utils/theme.dart';
 import 'package:helath/view/screens/PatientRead_screen.dart';
 
-import '../../logic/controllers/SensorController.dart';
-import '../../logic/local/shared.dart';
+import '../../../logic/controllers/SensorController.dart';
+import '../../../logic/local/shared.dart';
 
 class SensorReadScreen extends StatelessWidget {
    SensorReadScreen({Key? key}) : super(key: key);

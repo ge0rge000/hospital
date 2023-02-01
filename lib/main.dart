@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:helath/routes/routes.dart';
-import 'package:helath/view/screens/welcome_screen.dart';
+import 'package:helath/view/screens/main/welcome_screen.dart';
  
 import 'logic/local/shared.dart';
 

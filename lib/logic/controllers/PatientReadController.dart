@@ -14,7 +14,6 @@ class PatientReadController extends GetxController{
     super.onInit();
     print(data);
     getreadingpatient(data[0]['id_patient'],data[1]['id_sensor']);
-
   }
   void getreadingpatient(patiend_id,sensor_id)async{
 

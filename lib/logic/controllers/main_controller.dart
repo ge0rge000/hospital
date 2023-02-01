@@ -3,8 +3,10 @@
 
 import 'package:get/get.dart';
 import 'package:helath/view/screens/home_screen.dart';
-import 'package:helath/view/screens/sensor_read_screen.dart';
- import 'package:helath/view/screens/sesnors/favourite_screen.dart';
+import 'package:helath/view/screens/sesnors/sensor_read_screen.dart';
+
+import '../../view/screens/follow_screen.dart';
+
 
 
 
@@ -16,14 +18,14 @@ class MainController extends GetxController{
 
     HomeScreen(),
     SensorReadScreen(),
-    FavouriteScreen(),
+    FollowScreen(),
 
   ].obs;
 
   final title=[
     "Health APP",
     "sensors Readings",
-    "Favourities",
+    "Follow-Screen",
 
   ].obs;
 }

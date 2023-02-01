@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:helath/logic/controllers/main_controller.dart';
 
 import 'package:helath/utils/theme.dart';
-import '../../logic/controllers/main_controller.dart';
+
 class MainScreen extends StatelessWidget {
   MainScreen({Key? key}) : super(key: key);
 
@@ -52,7 +53,7 @@ class MainScreen extends StatelessWidget {
                 BottomNavigationBarItem(
                   activeIcon: Icon(Icons.favorite,color: Colors.black,),
 
-                  icon: Icon(Icons.favorite,
+                  icon: Icon(Icons.medication_outlined,
                     color: Get.isDarkMode?Colors.black:Colors.black,
                   ),
                   label: '',

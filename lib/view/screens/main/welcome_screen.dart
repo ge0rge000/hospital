@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../routes/routes.dart';
-import '../../utils/theme.dart';
-import '../widgets/text_utils.dart';
-import 'auth/login_screen.dart';
-import 'auth/signup_Screen.dart';
-import 'sesnors/sensor_detail.dart';
+import '../../../routes/routes.dart';
+import '../../../utils/theme.dart';
+import '../../widgets/text_utils.dart';
+import '../auth/login_screen.dart';
+import '../auth/signup_Screen.dart';
+import '../sesnors/sensor_detail.dart';
 
 class WelcomeScreen extends StatelessWidget {
 
